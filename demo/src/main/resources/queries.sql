@@ -39,9 +39,12 @@ first_name='Vaishnav';
 
 /*3*/
 
-SELECT COUNT(*) as no_of_submissions from submission where submission_status='Approved' group by 
+SELECT c.first_name,COUNT(*) as no_of_submissions from submission s join consultant_detail c on s.consultant_id=c.id where 
+submission_status='Approved' group by 
 consultant_id;
 
+Select * from consultant_detail;
+select * FROM SUBMISSION;
 /*4*/
 
 SELECT consultant_id, submission_date, COUNT(*) AS total_submissions
