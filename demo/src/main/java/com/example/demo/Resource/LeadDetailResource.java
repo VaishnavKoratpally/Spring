@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @RestController
@@ -35,13 +36,28 @@ public class LeadDetailResource {
         return service.addLead(lead);
     }
 
+    @DeleteMapping
+    public String removeLead(@PathVariable long id) {
+
+        return service.deleteLead(id);
+    }
+
+    @PutMapping
+    public LeadDetail editLead(long id,LeadDetail leadDetails) {
+        return service.editLead(id,leadDetails);
+
+    }
+
+
+
+
     private static LeadDetailDTO mapToDto(LeadDetail entity) {
         LeadDetailDTO dto = new LeadDetailDTO();
         dto.setId(entity.getId());
-//        dto.setFirstName(entity.getFirstName());
-        dto.setLastName(entity.getLastName());
-        dto.setEmailAddress(entity.getEmailAddress());
-        dto.setPhoneNumber(entity.getPhoneNumber());
+        dto.setFirstName(entity.getFirst_name());
+        dto.setLastName(entity.getLast_name());
+        dto.setEmailAddress(entity.getEmail_address());
+        dto.setPhoneNumber(entity.getPhone_number());
         dto.setConsultantList(entity.getConsultantList().stream().map(
                 consultantDetail -> {
                     ConsultantDetailsDTO cDto = new ConsultantDetailsDTO();

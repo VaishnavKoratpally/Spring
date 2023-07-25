@@ -23,10 +23,10 @@ public class LeadDetailsService implements ILeadDetailService{
         LeadDetail lead = repository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("User not found"));
         lead.setId(leadDetails.getId());
-//        lead.setFirstName(lead.getFirstName());
-        lead.setLastName(leadDetails.getLastName());
-        lead.setEmailAddress(leadDetails.getEmailAddress());
-        lead.setPhoneNumber(leadDetails.getPhoneNumber());
+        lead.setFirst_name(lead.getFirst_name());
+        lead.setLast_name(leadDetails.getLast_name());
+        lead.setEmail_address(leadDetails.getEmail_address());
+        lead.setPhone_number(leadDetails.getPhone_number());
 
         return lead;
 
@@ -40,7 +40,7 @@ public class LeadDetailsService implements ILeadDetailService{
 
 
 
-    public String  deleteLead(long id) {
+    public  String  deleteLead(long id) {
         repository.deleteById(id);
         return "Success";
     }

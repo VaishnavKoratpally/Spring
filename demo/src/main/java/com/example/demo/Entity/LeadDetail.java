@@ -18,13 +18,13 @@ public class LeadDetail {
     private String first_name;
 
     @Column(name="last_name")
-    private String lastName;
+    private String last_name;
 
     @Column(name="email_address")
-    private String emailAddress;
+    private String email_address;
 
     @Column(name="phone_number")
-    private String phoneNumber;
+    private String phone_number;
 
     @OneToMany(mappedBy="leadDetail", cascade = CascadeType.ALL)
     private List<ConsultantDetail> consultantList;
