@@ -7,7 +7,7 @@ import java.util.List;
 @Service
 public class SubmissionService implements SubmissionInterface{
     @Autowired
-    private SubmissionRepository submissionRepository;
+    private SubmissionRepository1 submissionRepository;
 
 
 

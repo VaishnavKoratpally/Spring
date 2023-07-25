@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository
-public class SubmissionRepository implements SubmissionInterface{
+public class SubmissionRepository1 implements SubmissionInterface{
 
     public Map<String,SubmissionForm> hashMap=new HashMap<String,SubmissionForm>();
 

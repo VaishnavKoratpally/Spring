@@ -10,12 +10,13 @@ import java.util.UUID;
 
 public class SubmissionRepositoryTest {
 
-    private SubmissionRepository submissionRepository;
+    private SubmissionRepository1 submissionRepository;
     private Map<String, SubmissionForm> hashMap;
 
     @BeforeEach
     public void setUp() {
-        submissionRepository = new SubmissionRepository();
+        submissionRepository = new SubmissionRepository1();
+
         hashMap = submissionRepository.hashMap;
     }
 

@@ -19,7 +19,7 @@ public class SubmissionResourceTest {
     private SubmissionService submissionService;
 
     @InjectMocks
-    private SubmissionResource submissionResource;
+    private SubmissionResource1 submissionResource;
 
     @BeforeEach
     public void setup() {

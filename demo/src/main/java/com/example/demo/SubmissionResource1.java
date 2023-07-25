@@ -5,7 +5,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/submission")
 
-public class SubmissionResource implements SubmissionInterface {
+public class SubmissionResource1 implements SubmissionInterface {
     @Autowired
     private SubmissionService submissionService;
 

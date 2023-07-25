@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.SubmissionRepository;
+import com.example.demo.SubmissionRepository1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class SubmissionServiceTest {
 
     @Mock
-    private SubmissionRepository submissionRepository;
+    private SubmissionRepository1 submissionRepository;
 
     @InjectMocks
     private SubmissionService submissionService;
